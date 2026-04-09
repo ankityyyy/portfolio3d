@@ -41,18 +41,18 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <div className="header">
+     <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          AM
+          
         </a>
         <a
-          href="https://www.linkedin.com/in/akashrmalhotra/"
+          href="https://www.linkedin.com/in/ankitkumardubey"
           className="navbar-connect"
           data-cursor="disable"
           target="_blank"
           rel="noreferrer"
         >
-          linkedin.com/in/akashrmalhotra
+          linkedin.com/in/ankitkumardubey
         </a>
         <ul>
           <li>

@@ -28,9 +28,9 @@ const WhatIDo = () => {
     <div className="whatIDO">
       <div className="what-box">
         <h2 className="title">
-          W<span className="hat-h2">HAT</span>
+          W<span className="hat-h2">HAT </span>
           <div>
-            I<span className="do-h2"> DO</span>
+            I<span className="do-h2">BUILD</span>
           </div>
         </h2>
       </div>
@@ -87,21 +87,22 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>AI & AUTOMATION</h3>
-              <h4>Workflow Intelligence for Organizations</h4>
-              <p>
-                AI specialist helping organizations automate workflows—internal ops
-                and customer-facing—so teams ship faster with less manual work.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">LLMs &amp; agents</div>
-                <div className="what-tags">Workflow design</div>
-                <div className="what-tags">RAG &amp; retrieval</div>
-                <div className="what-tags">Evals &amp; guardrails</div>
-                <div className="what-tags">Integrations</div>
-                <div className="what-tags">Product strategy</div>
-              </div>
+             <h3>GEN AI </h3>
+<h4>Building Intelligent Applications</h4>
+<p>
+  I build Generative AI applications like AI agents and RAG systems, and I am learning System Design to create scalable architectures.
+</p>
+<h5>Skillset & tools</h5>
+
+
+<div className="what-content-flex">
+  <div className="what-tags">LLMs</div>
+  <div className="what-tags">AI Agents</div>
+  <div className="what-tags">RAG</div>
+  <div className="what-tags">System Design</div>
+  <div className="what-tags">Node.js</div>
+  <div className="what-tags">Python</div>
+</div>
               <div className="what-arrow"></div>
             </div>
           </div>
@@ -124,22 +125,21 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>BUILD &amp; SCALE</h3>
-              <h4>Shipping AI in Production</h4>
-              <p>
-                I build the systems behind it: APIs, data, voice/real-time, and
-                full-stack products—production-ready, not slide decks.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Python</div>
-                <div className="what-tags">REST &amp; real-time APIs</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Cloud &amp; infra</div>
-              </div>
+              <h3>FULL STACK</h3>
+<h4>Building Scalable Web Applications</h4>
+<p>
+ I build full-stack applications using the MERN stack with 5+ projects, and have knowledge of DevOps for efficient deployment.
+</p>
+<h5>Skillset & tools</h5>
+<div className="what-content-flex">
+  <div className="what-tags">React</div>
+  <div className="what-tags">Node.js</div>
+  <div className="what-tags">MongoDB</div>
+  <div className="what-tags">Express</div>
+  <div className="what-tags">Docker</div>
+  <div className="what-tags">CI/CD</div>
+  <div className="what-tags">AWS</div>
+</div>
               <div className="what-arrow"></div>
             </div>
           </div>

@@ -4,33 +4,48 @@ import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
+{
+  title: "PDF & DB RAG System",
+  category: "Ask questions from PDFs and databases using AI",
+  tools: "Node.js, Express, MongoDB, OpenAI API, LangChain, Vector DB",
+  image: "/images/projects/project7.png",
+  link: ""
+},
+  
   {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
+    title: "MeetEase",
+    category: "A real-time video calling web application enabling peer-to- peer communication.",
+    tools: "React, Material UI,Web RTC",
+    image: "/images/projects/project1.png",
+    link: "https://apna-videocall-frontend.onrender.com/",
   },
   {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
+    title: "Airbnb",
+    category: "A web-based platform for listing and booking rental properties. The application allows users to perform CRUD operations for property listings and includes secure authentication for user accounts.",
+    tools: " MongoDB, Node.js, EJS",
+    image: "/images/projects/project2.png",
+    link: "",
   },
   {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
+    title: "LinkedIn Platform",
+    category: "Built a full-featured LinkedIn clone using the MERN stack with user authentication, real-time posts, likes, comments, and profile management",
+    tools: "React, Redux, Cloudinary",
+    image: "/images/projects/project3.png",
+    link: "https://linkedin-frontend-hi4w.onrender.com",
   },
   {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "Amazon",
+    category: "Ecommerce Platform ",
+    tools: "oauth 2.0, React, Cloudinary",
+    image: "/images/projects/project4.png",
+    link: "",
+  },
+  {
+    title: "Portfolio",
+    category: "A modern and responsive personal portfolio showcasing my skills, projects, and experience.Built using React, Tailwind CSS, and deployed on platforms like Netlify.Features smooth animations, interactive UI, and sections like About, Projects, Contact, and Resume. ",
+    tools: " React Tailwind CSS",
+    image: "/images/projects/project6.png",
+    link: "https://neon-nasturtium-ec6760.netlify.app/",
   },
 ];
 

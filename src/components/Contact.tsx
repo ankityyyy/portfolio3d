@@ -11,27 +11,26 @@ const Contact = () => {
             <h4>Connect</h4>
             <p>
               <a
-                href="https://www.linkedin.com/in/akashrmalhotra/"
+                href="https://www.linkedin.com/in/ankitkumardubey"
                 target="_blank"
                 rel="noreferrer"
                 data-cursor="disable"
               >
-                LinkedIn — akashrmalhotra
+                LinkedIn — Ankitdubey
               </a>
             </p>
             <h4>Education</h4>
             <p>
-              PGPWE (MBA), Indian Institute of Management, Lucknow — 2021–2023
+             MCA — Marwari College, Ranchi (2024–2026) | Focus: Full Stack, GenAI, System Design
             </p>
             <p>
-              B.Tech Computer Science, Manav Rachna Educational Institutions —
-              2009–2013
+             BCA (Bachelor of Computer Applications), Doranda College, Ranchi — 2020–2023
             </p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://github.com/akashrmalhotra"
+              href="https://github.com/ankityyyy?tab=repositories"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -40,7 +39,7 @@ const Contact = () => {
               GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/akashrmalhotra/"
+              href="https://www.linkedin.com/in/ankitkumardubey"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -48,17 +47,9 @@ const Contact = () => {
             >
               LinkedIn <MdArrowOutward />
             </a>
+            
             <a
-              href="https://www.youtube.com/@Leftbraincoder"
-              target="_blank"
-              rel="noreferrer"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              YouTube <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com/leftbraincoder/"
+              href="https://www.instagram.com/ankit_dubey10/"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -69,7 +60,7 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Akash Malhotra</span>
+              Designed and Developed <br /> by <span>ANKIT DUBEY</span>
             </h2>
             <h5>
               <MdCopyright /> 2026

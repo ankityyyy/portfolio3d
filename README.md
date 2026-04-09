@@ -2,9 +2,9 @@
 
 This repository contains the source code for a personal 3D portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
 
-Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.app/)
+Live site: [https://](https://)
 
-![Portfolio Preview](public/images/preview1.png)
+
 
 ## Table of Contents
 
@@ -13,11 +13,10 @@ Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Available Scripts](#available-scripts)
-- [GSAP License Note](#gsap-license-note)
 - [Customization Guide](#customization-guide)
 - [Troubleshooting](#troubleshooting)
 - [Deployment](#deployment)
-- [License](#license)
+
 
 ## Features
 
@@ -171,6 +170,3 @@ You can adapt this portfolio to your own profile by updating the following areas
 
 3. Deploy the generated `dist/` folder to your hosting provider (for example Vercel, Netlify, or Cloudflare Pages).
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).

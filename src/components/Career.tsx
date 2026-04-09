@@ -2,76 +2,65 @@ import "./styles/Career.css";
 
 const Career = () => {
   return (
-    <div className="career-section section-container">
-      <div className="career-container">
-        <h2>
-          My career <span>&</span>
-          <br /> experience
-        </h2>
-        <div className="career-info">
-          <div className="career-timeline">
-            <div className="career-dot"></div>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Co-Founder</h4>
-                <h5>CallHQ.ai</h5>
-              </div>
-              <h3>NOW</h3>
+  <div className="career-section section-container">
+        <div className="career-container">
+          <h2>
+            My journey <span>&</span>
+            <br /> experience
+          </h2>
+  
+          <div className="career-info">
+            <div className="career-timeline">
+              <div className="career-dot"></div>
             </div>
-            <p>
-              Building CallHQ.ai, a voice AI platform for
-              automating customer calls, support, and conversions.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Adobe</h4>
-                <h5>6+ years · Noida</h5>
+  
+            {/* Current */}
+            <div className="career-info-box">
+              <div className="career-info-in">
+                <div className="career-role">
+                  <h4>Full Stack Developer</h4>
+                  <h5>Personal Projects</h5>
+                </div>
+                <h3>Present</h3>
               </div>
-              <h3>2017–24</h3>
+              <p>
+                Building 5+ MERN stack projects and 3+ Generative AI applications
+                including AI agents and RAG-based systems, focused on solving real-world problems.
+              </p>
             </div>
-            <p>
-              Senior Lead Software Engineer (Feb 2024 – May 2024). Lead Software
-              Engineer (Feb 2021 – Feb 2024). Software Engineer II (Dec 2017 –
-              Feb 2021): internationalization, globalization, and localization for
-              Adobe Technical Communication Suite; functional and linguistic testing
-              strategy; in-house tooling; collaboration with product and engineering
-              for high-quality localized releases.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Consultant</h4>
-                <h5>Genpact Headstrong </h5>
+  
+            {/* Internship */}
+            <div className="career-info-box">
+              <div className="career-info-in">
+                <div className="career-role">
+                  <h4>Web Development Intern</h4>
+                  <h5>CollegeTips.in</h5>
+                </div>
+                <h3>2025</h3>
               </div>
-              <h3>2016–17</h3>
+              <p>
+                Worked on real-world web applications, improving frontend and backend
+                development skills and gaining practical industry experience.
+              </p>
             </div>
-            <p>
-              Sep 2016 – Nov 2017. Developed and maintained WCF services consumed
-              by the UI; deployment support across environments; NUnit tests and
-              coverage; bug fixes from QA and users; database work.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Sf Engineer</h4>
-                <h5>Infogain</h5>
+  
+            {/* Learning Phase */}
+            <div className="career-info-box">
+              <div className="career-info-in">
+                <div className="career-role">
+                  <h4>Learning & Building</h4>
+                  <h5>MERN • DSA • DevOps • GenAI</h5>
+                </div>
+                <h3>2024 – Present</h3>
               </div>
-              <h3>2013-16</h3>
+              <p>
+                Continuously improving Data Structures & Algorithms, DevOps (Docker,
+                CI/CD, AWS), and System Design while building scalable applications.
+              </p>
             </div>
-            <p>
-              Software engineering across enterprise projects, contributing to
-              design, development, and delivery of business applications.
-            </p>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
