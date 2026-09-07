@@ -43,6 +43,10 @@ const Scene = () => {
       camera.zoom = 1.1;
       camera.updateProjectionMatrix();
 
+      // --- 2. BASE LIGHTING FIX: Soft ambient light to prevent pitch-black shadows ---
+      const baseAmbientLight = new THREE.AmbientLight(0xffffff, 0.8);
+      scene.add(baseAmbientLight);
+
       let headBone: THREE.Object3D | null = null;
       let screenLight: any | null = null;
       let mixer: THREE.AnimationMixer;
@@ -63,12 +67,13 @@ const Scene = () => {
           scene.add(character);
           headBone = character.getObjectByName("spine006") || null;
           screenLight = character.getObjectByName("screenlight") || null;
+          
           progress.loaded().then(() => {
-            setTimeout(() => {
-              light.turnOnLights();
-              animations.startIntro();
-            }, 2500);
+            // Immediate light turn-on to avoid render blackouts
+            light.turnOnLights();
+            animations.startIntro();
           });
+
           window.addEventListener("resize", () =>
             handleResize(renderer, camera, canvasDiv, character)
           );

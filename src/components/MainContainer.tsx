@@ -9,6 +9,7 @@ import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
+import CharacterModel from "./Character";
 
 const TechStack = lazy(() => import("./TechStack"));
 
@@ -31,11 +32,14 @@ const MainContainer = ({ children }: PropsWithChildren) => {
 
   return (
     <div className="container-main">
-      <Cursor />
-      <Navbar />
-      <SocialIcons />
-      {isDesktopView && children}
-      <div id="smooth-wrapper">
+  <Cursor />
+  <Navbar />
+
+  {isDesktopView && children}
+
+  {isDesktopView && <CharacterModel />}
+
+  <div id="smooth-wrapper">
         <div id="smooth-content">
           <div className="container-main">
             <Landing>{!isDesktopView && children}</Landing>

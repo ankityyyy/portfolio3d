@@ -4,46 +4,77 @@ import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
-{
-  title: "PDF & DB RAG System",
-  category: "Ask questions from PDFs and databases using AI",
-  tools: "Node.js, Express, MongoDB, OpenAI API, LangChain, Vector DB",
-  image: "/images/projects/project7.png",
-  link: ""
-},
-  
+  {
+    title: "AI-Powered Shopping Platform",
+    category:
+      "AI-powered e-commerce platform with secure authentication, AI search, review summarization, and real-time notifications.",
+    tools:
+      "MongoDB, Express.js, React.js, Node.js, Redis, OpenAI API, JWT, Tailwind CSS",
+    image: "/images/projects/project71.png",
+    link: "https://majestic-fudge-6b1920.netlify.app/",
+  },
+
+  {
+    title: "AI Interview Platform",
+    category:
+      "AI-powered interview platform with resume screening, adaptive interviews, RAG-based question generation, candidate evaluation, and HR reporting.",
+    tools:
+      "React.js, Tailwind CSS, Node.js, Express.js, MongoDB, LangChain, LangGraph, Qdrant, Neo4j, OpenAI API",
+    image: "/images/projects/project8.png",
+    link: "https://aiinterviewprojec.netlify.app/",
+  },
+
+  {
+    title: "PDF RAG Chatbot",
+    category:
+      "RAG-based PDF chatbot for document understanding using multi-query retrieval, knowledge graphs, and AI-powered question answering.",
+    tools:
+      "LangChain, LangGraph, Qdrant, OpenAI API, Langfuse, Knowledge Graphs, Multi-Query Retrieval",
+    image: "/images/projects/project9.png",
+    link: "https://rag-peach-phi.vercel.app",
+  },
+
   {
     title: "MeetEase",
-    category: "A real-time video calling web application enabling peer-to- peer communication.",
-    tools: "React, Material UI,Web RTC",
+    category:
+      "Real-time video calling application enabling peer-to-peer communication.",
+    tools: "React, Material UI, WebRTC",
     image: "/images/projects/project1.png",
     link: "https://apna-videocall-frontend.onrender.com/",
   },
+
   {
     title: "Airbnb",
-    category: "A web-based platform for listing and booking rental properties. The application allows users to perform CRUD operations for property listings and includes secure authentication for user accounts.",
-    tools: " MongoDB, Node.js, EJS",
+    category:
+      "Property listing and booking platform with CRUD operations and secure user authentication.",
+    tools: "MongoDB, Node.js, EJS",
     image: "/images/projects/project2.png",
     link: "",
   },
+
   {
     title: "LinkedIn Platform",
-    category: "Built a full-featured LinkedIn clone using the MERN stack with user authentication, real-time posts, likes, comments, and profile management",
+    category:
+      "LinkedIn-inspired social platform with authentication, posts, likes, comments, and profile management.",
     tools: "React, Redux, Cloudinary",
     image: "/images/projects/project3.png",
     link: "https://linkedin-frontend-hi4w.onrender.com",
   },
+
   {
     title: "Amazon",
-    category: "Ecommerce Platform ",
-    tools: "oauth 2.0, React, Cloudinary",
+    category:
+      "E-commerce platform with authentication and cloud-based image management.",
+    tools: "React, OAuth 2.0, Cloudinary",
     image: "/images/projects/project4.png",
     link: "",
   },
+
   {
     title: "Portfolio",
-    category: "A modern and responsive personal portfolio showcasing my skills, projects, and experience.Built using React, Tailwind CSS, and deployed on platforms like Netlify.Features smooth animations, interactive UI, and sections like About, Projects, Contact, and Resume. ",
-    tools: " React Tailwind CSS",
+    category:
+      "Responsive personal portfolio showcasing my skills, projects, and experience with interactive UI and animations.",
+    tools: "React, Tailwind CSS",
     image: "/images/projects/project6.png",
     link: "https://neon-nasturtium-ec6760.netlify.app/",
   },

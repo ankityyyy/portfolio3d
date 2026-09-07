@@ -87,21 +87,24 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-             <h3>GEN AI </h3>
+       <h3>GEN AI</h3>
+
 <h4>Building Intelligent Applications</h4>
+
 <p>
-  I build Generative AI applications like AI agents and RAG systems, and I am learning System Design to create scalable architectures.
+  I build Generative AI applications using RAG, AI Agents, and modern LLM technologies.
 </p>
+
 <h5>Skillset & tools</h5>
 
-
 <div className="what-content-flex">
-  <div className="what-tags">LLMs</div>
-  <div className="what-tags">AI Agents</div>
   <div className="what-tags">RAG</div>
-  <div className="what-tags">System Design</div>
-  <div className="what-tags">Node.js</div>
-  <div className="what-tags">Python</div>
+  <div className="what-tags">Advanced RAG</div>
+  <div className="what-tags">AI Agents</div>
+  <div className="what-tags">LangChain</div>
+  <div className="what-tags">LangGraph</div>
+  <div className="what-tags">Qdrant</div>
+  <div className="what-tags">OpenAI API</div>
 </div>
               <div className="what-arrow"></div>
             </div>
@@ -125,19 +128,25 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>FULL STACK</h3>
-<h4>Building Scalable Web Applications</h4>
+           <h3>FULL STACK</h3>
+
+<h4>Building Web Applications</h4>
+
 <p>
- I build full-stack applications using the MERN stack with 5+ projects, and have knowledge of DevOps for efficient deployment.
+  I build full-stack applications using the MERN stack with experience in React, Node.js, Express, and MongoDB.
 </p>
+
 <h5>Skillset & tools</h5>
+
 <div className="what-content-flex">
   <div className="what-tags">React</div>
   <div className="what-tags">Node.js</div>
-  <div className="what-tags">MongoDB</div>
   <div className="what-tags">Express</div>
+  <div className="what-tags">MongoDB</div>
+  <div className="what-tags">REST APIs</div>
   <div className="what-tags">Docker</div>
-  <div className="what-tags">CI/CD</div>
+  <div className="what-tags">Git</div>
+  <div className="what-tags">Kubernetes</div>
   <div className="what-tags">AWS</div>
 </div>
               <div className="what-arrow"></div>

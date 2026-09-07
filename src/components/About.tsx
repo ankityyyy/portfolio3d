@@ -6,11 +6,11 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
        <p className="para">
-         Full Stack Developer experienced in MERN stack and Generative AI, with internship experience at CollegeTips.in.
-       
-         Skilled in Java, JavaScript, and Python, with knowledge of DevOps concepts including Docker, CI/CD, Linux, and AWS. Currently strengthening Data Structures & Algorithms.
-       
-         Focused on building scalable applications and solving real-world problems through clean and efficient code.
+  Full Stack Developer and MCA student with experience in MERN Stack and Generative AI. Gained practical experience through internships at CollegeTips.in and Shashi Infotech.
+
+Skilled in Java, JavaScript, Python, React, Node.js, Express.js, MongoDB, and familiar with Docker, CI/CD, Linux, and AWS. Passionate about building real-world applications and solving problems with clean, efficient code.
+
+
        </p>
       </div>
     </div>
