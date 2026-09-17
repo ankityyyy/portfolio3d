@@ -1,8 +1,22 @@
 
-import { useEffect, useRef, useState } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+} from "react";
+
 import "../styles/AIChatbot.css";
 
-const initialMessages = [
+type Message = {
+  id: string | number;
+  role: "assistant" | "user";
+  text: string;
+  time: string;
+  error?: boolean;
+};
+
+const initialMessages: Message[] = [
   {
     id: 1,
     role: "assistant",
@@ -12,14 +26,12 @@ const initialMessages = [
 ];
 
 function AIChatbot() {
-  const [messages, setMessages] = useState(initialMessages);
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-
-  // Chatbot open / close
   const [isOpen, setIsOpen] = useState(false);
 
-  const messagesContainerRef = useRef(null);
+  const messagesContainerRef = useRef<HTMLDivElement | null>(null);
 
   // Scroll only chatbot messages
   useEffect(() => {
@@ -43,13 +55,14 @@ function AIChatbot() {
   // ==========================================
   // SEND MESSAGE
   // ==========================================
-
   const handleSend = async () => {
     const question = input.trim();
 
     if (!question || loading) return;
-console.log("Sending to backend:", question);
-    const userMessage = {
+
+    console.log("Sending to backend:", question);
+
+    const userMessage: Message = {
       id: crypto.randomUUID(),
       role: "user",
       text: question,
@@ -57,14 +70,13 @@ console.log("Sending to backend:", question);
     };
 
     setMessages((prev) => [...prev, userMessage]);
-
     setInput("");
     setLoading(true);
 
     try {
       const response = await fetch(
         "https://portfol-backend.onrender.com/api/v1/query/063a2a39-01a8-43c2-bf85-cfce19ff35cc",
-        { 
+        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -86,7 +98,6 @@ console.log("Sending to backend:", question);
       // ==========================================
       // OPEN PROJECT / LINK
       // ==========================================
-
       if (data.action === "open_link" && data.url) {
         window.open(data.url, "_blank");
       }
@@ -94,8 +105,7 @@ console.log("Sending to backend:", question);
       // ==========================================
       // BOT MESSAGE
       // ==========================================
-
-      const botMessage = {
+      const botMessage: Message = {
         id: crypto.randomUUID(),
         role: "assistant",
         text: data.answer || "I couldn't generate a response.",
@@ -103,7 +113,6 @@ console.log("Sending to backend:", question);
       };
 
       setMessages((prev) => [...prev, botMessage]);
-
     } catch (error) {
       console.error("Chatbot error:", error);
 
@@ -117,7 +126,6 @@ console.log("Sending to backend:", question);
           error: true,
         },
       ]);
-
     } finally {
       setLoading(false);
     }
@@ -126,19 +134,18 @@ console.log("Sending to backend:", question);
   // ==========================================
   // ENTER KEY
   // ==========================================
-
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (
+    event: KeyboardEvent<HTMLInputElement>
+  ) => {
     if (event.key === "Enter" && !event.shiftKey) {
       event.preventDefault();
       handleSend();
     }
   };
 
-
   // ==========================================
   // SMALL CHATBOT
   // ==========================================
-
   if (!isOpen) {
     return (
       <button
@@ -159,20 +166,14 @@ console.log("Sending to backend:", question);
     );
   }
 
-
   // ==========================================
   // LARGE CHATBOT
   // ==========================================
-
   return (
     <div className="ai-chatbot">
-
       {/* ================= HEADER ================= */}
-
       <div className="chat-header">
-
         <div className="bot-info">
-
           <div className="bot-avatar">
             🤖
             <span className="online-dot"></span>
@@ -187,11 +188,9 @@ console.log("Sending to backend:", question);
               Your AI companion to explore my work
             </p>
           </div>
-
         </div>
 
         {/* CLOSE / MINIMIZE */}
-
         <button
           className="minimize-btn"
           type="button"
@@ -200,19 +199,14 @@ console.log("Sending to backend:", question);
         >
           −
         </button>
-
       </div>
 
-
       {/* ================= MESSAGES ================= */}
-
       <div
         className="chat-messages"
         ref={messagesContainerRef}
       >
-
         {messages.map((message) => (
-
           <div
             key={message.id}
             className={`message ${
@@ -221,20 +215,15 @@ console.log("Sending to backend:", question);
                 : "bot-message"
             }`}
           >
-
             {/* BOT AVATAR */}
-
             {message.role === "assistant" && (
               <div className="message-avatar">
                 🤖
               </div>
             )}
 
-
             {/* MESSAGE */}
-
             <div className="message-content">
-
               <div
                 className={`message-box ${
                   message.error
@@ -246,7 +235,6 @@ console.log("Sending to backend:", question);
               </div>
 
               <span className="message-time">
-
                 {message.time}
 
                 {message.role === "user" && (
@@ -254,56 +242,37 @@ console.log("Sending to backend:", question);
                     ✓✓
                   </span>
                 )}
-
               </span>
-
             </div>
 
-
             {/* USER AVATAR */}
-
             {message.role === "user" && (
               <div className="user-avatar">
                 👤
               </div>
             )}
-
           </div>
-
         ))}
 
-
         {/* ================= TYPING ================= */}
-
         {loading && (
-
           <div className="message bot-message">
-
             <div className="message-avatar">
               🤖
             </div>
 
             <div className="typing-box">
-
               <span></span>
               <span></span>
               <span></span>
-
             </div>
-
           </div>
-
         )}
-
       </div>
 
-
       {/* ================= INPUT ================= */}
-
       <div className="chat-input-wrapper">
-
         <div className="chat-input">
-
           <input
             type="text"
             placeholder="Ask me anything about Ankit..."
@@ -318,22 +287,18 @@ console.log("Sending to backend:", question);
           <button
             type="button"
             onClick={handleSend}
-            disabled={
-              !input.trim() || loading
-            }
+            disabled={!input.trim() || loading}
             aria-label="Send message"
           >
             <span>➤</span>
           </button>
-
         </div>
-
       </div>
-
     </div>
   );
 }
 
 export default AIChatbot;
+
 
 
