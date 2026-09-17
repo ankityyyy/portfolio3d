@@ -48,7 +48,7 @@ function AIChatbot() {
     const question = input.trim();
 
     if (!question || loading) return;
-
+console.log("Sending to backend:", question);
     const userMessage = {
       id: crypto.randomUUID(),
       role: "user",
@@ -63,7 +63,7 @@ function AIChatbot() {
 
     try {
       const response = await fetch(
-        "http://localhost:2000/api/v1/query/d503578f-f1e0-4b36-b9c5-5a65585d2fcb",
+        "http://localhost:2000/api/v1/query/063a2a39-01a8-43c2-bf85-cfce19ff35cc",
         {
           method: "POST",
           headers: {

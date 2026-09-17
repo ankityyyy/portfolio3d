@@ -1,3 +1,7 @@
+/* =========================================================
+   LANDING SECTION
+   ========================================================= */
+
 .landing-section {
   min-height: 100vh;
   width: 100%;
@@ -6,22 +10,31 @@
   position: relative;
 }
 
-/* ================= SOCIAL SIDEBAR ================= */
+
+/* =========================================================
+   SOCIAL SIDEBAR
+   ========================================================= */
 
 .social-sidebar {
   position: absolute;
+
   left: 25px;
   top: 50%;
+
   transform: translateY(-50%);
+
   display: flex;
   flex-direction: column;
+
   gap: 20px;
+
   z-index: 20;
 }
 
 .social-sidebar a {
   color: #aab3c2;
   font-size: 22px;
+
   transition: color 0.3s ease;
 }
 
@@ -29,304 +42,719 @@
   color: #35d8d5;
 }
 
-/* ================= LANDING CONTAINER ================= */
+
+/* =========================================================
+   LANDING CONTAINER
+   ========================================================= */
 
 .landing-container {
   width: min(1400px, calc(100% - 60px));
+
   min-height: 100vh;
+
   margin: auto;
+
+  /*
+    Landing contains only:
+    1. landing-left
+    2. landing-right
+  */
   display: grid;
-  /* Rebalanced grid columns so center 3D character gets enough space */
-  grid-template-columns: 0.85fr 1.2fr 0.95fr;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
   align-items: center;
-  gap: 20px;
+
+  gap: 40px;
+
   position: relative;
 }
 
-/* ================= LEFT COLUMN ================= */
+
+/* =========================================================
+   LEFT COLUMN
+   ========================================================= */
 
 .landing-left {
-  z-index: 5;
+  position: relative;
+
+  z-index: 10;
+
   align-self: center;
+
   padding-left: 50px;
+
+  min-width: 0;
 }
 
 .hello {
   color: #58e0df;
+
   font-size: 22px;
+
   letter-spacing: 2px;
+
   margin-bottom: 10px;
 }
 
-.landing-left h1 {
+.landing-left h2 {
+  font-size: clamp(32px, 3.2vw, 58px);
+
+  line-height: 1;
+
+  margin: 15px 0;
+}
+
+.landing-left h2:first-of-type {
   font-size: clamp(48px, 4.5vw, 82px);
+
   line-height: 0.9;
+
   margin: 0;
+
   letter-spacing: 3px;
+
   font-weight: 800;
 }
 
-.landing-left h1 span {
-  font-weight: 700;
+.landing-left h2 span {
+  background: linear-gradient(
+    90deg,
+    #36d9d5,
+    #9a6cff
+  );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
 }
 
 .line {
   width: 60px;
+
   height: 3px;
+
   background: #35d8d5;
+
   margin: 25px 0;
 }
 
 .role {
   color: #62e2df;
+
   font-size: 20px;
+
   letter-spacing: 3px;
-}
-
-.landing-left h2 {
-  font-size: clamp(32px, 3.2vw, 58px);
-  line-height: 1;
-  margin: 15px 0;
-}
-
-.landing-left h2 span {
-  background: linear-gradient(90deg, #36d9d5, #9a6cff);
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .description {
   max-width: 450px;
+
   color: #aab3c2;
+
   line-height: 1.8;
+
   font-size: 16px;
 }
 
-/* ================= HERO BUTTONS ================= */
 
-.hero-buttons {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 28px;
-}
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
 
 .hero-buttons {
   position: relative;
+
   z-index: 20;
 
   display: flex;
+
   align-items: center;
+
   gap: 16px;
 
   margin-top: 28px;
 }
-.hero-buttons button {
+
+.hero-buttons button,
+.hero-buttons a {
   height: 48px;
+
   padding: 0 24px;
+
   font-size: 14px;
+
   font-weight: 600;
+
   letter-spacing: 0.8px;
+
   border-radius: 8px;
+
   cursor: pointer;
+
   transition: all 0.3s ease;
+
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   text-transform: uppercase;
+
+  box-sizing: border-box;
 }
 
-/* Outlined "VIEW WORK" */
+
+/* =========================================================
+   RESUME / VIEW WORK
+   ========================================================= */
+
 .hero-buttons .view-work {
   background: transparent;
+
   color: #36d9d5;
+
   border: 1.5px solid #36d9d5;
-  box-shadow: 0 0 12px rgba(54, 217, 213, 0.15);
+
+  box-shadow:
+    0 0 12px rgba(54, 217, 213, 0.15);
 }
 
 .hero-buttons .view-work:hover {
   background: rgba(54, 217, 213, 0.1);
-  box-shadow: 0 0 20px rgba(54, 217, 213, 0.35);
+
+  box-shadow:
+    0 0 20px rgba(54, 217, 213, 0.35);
+
   transform: translateY(-2px);
 }
 
-/* Gradient Filled "CONTACT ME" */
+
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
+
 .hero-buttons .contact-me {
-  background: linear-gradient(135deg, #36d9d5 0%, #8b5cf6 100%);
+  background: linear-gradient(
+    135deg,
+    #36d9d5 0%,
+    #8b5cf6 100%
+  );
+
   color: #ffffff;
+
   border: none;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.35);
+
+  box-shadow:
+    0 4px 20px rgba(139, 92, 246, 0.35);
 }
 
 .hero-buttons .contact-me:hover {
   opacity: 0.92;
-  box-shadow: 0 6px 24px rgba(139, 92, 246, 0.55);
+
+  box-shadow:
+    0 6px 24px rgba(139, 92, 246, 0.55);
+
   transform: translateY(-2px);
 }
 
-/* ================= CENTER (3D CHARACTER CONTAINER) ================= */
 
-/* .landing-center {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  z-index: 1;
-  overflow: visible;
-} */
-
-.landing-container {
-  width: min(1400px, calc(100% - 60px));
-  min-height: 100vh;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-  position: relative;
-}
-
-.character-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.character-model {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  /* Scaled down slightly so model hands/shoulders stay within screen boundaries */
-  transform: scale(0.92);
-  transform-origin: bottom center;
-}
-
-
+/* =========================================================
+   3D CHARACTER
+   NOTE:
+   Character is NOT inside .landing-container.
+   It is rendered separately by MainContainer.
+   ========================================================= */
 
 .character-container {
   position: fixed;
+
   left: 48%;
+
   bottom: 0;
+
   transform: translateX(-50%);
+
   width: 500px;
+
   height: 100vh;
+
   z-index: 1;
+
   pointer-events: none;
+
   background: transparent;
 }
 
 .character-model {
   width: 100%;
-  height: 100%;
-  position: relative;
-}
 
-/* .character-model canvas {
-  width: 100% !important;
-  height: 100% !important;
-  outline: none;
-  display: block;
-} */
+  height: 100%;
+
+  position: relative;
+
+  background: transparent;
+
+  overflow: visible;
+}
 
 .character-model canvas {
   width: 100% !important;
-  height: 100% !important;
-  outline: none;
-  display: block;
-  background: transparent !important;
-}
 
-.character-model {
-  background: transparent;
-  overflow: visible;
+  height: 100% !important;
+
+  outline: none;
+
+  display: block;
+
+  background: transparent !important;
 }
 
 .character-container {
   background: transparent;
 }
+
 .avatar-img {
   max-width: 100%;
+
   max-height: 85vh;
+
   object-fit: contain;
+
   display: block;
 }
 
-/* ================= RIGHT (CHATBOT COLUMN) ================= */
+
+/* =========================================================
+   RIGHT / AI CHATBOT
+   ========================================================= */
 
 .landing-right {
   width: 80%;
+
   height: calc(100vh - 120px);
+
   align-self: center;
+
   z-index: 10;
+
   position: relative;
-  left:180px;
-  top:20px
+
+  /*
+    Keep your existing desktop position.
+  */
+  left: 180px;
+
+  top: 20px;
+
+  min-width: 0;
+
+  box-sizing: border-box;
 }
 
-.landing-left {
-  position: relative;
-  z-index: 10;
-  align-self: center;
-  padding-left: 50px;
-}
 
-/* .landing-right {
-  z-index: 10;
-  position: relative;
-} */
+/* =========================================================
+   LARGE LAPTOP
+   1200px - 1400px
+   ========================================================= */
 
-/* ================= RESPONSIVE DESIGN ================= */
-
-@media (max-width: 1100px) {
-  .social-sidebar {
-    position: static;
-    transform: none;
-    flex-direction: row;
-    margin-bottom: 20px;
-  }
+@media (max-width: 1400px) {
 
   .landing-container {
-    padding-left: 0;
-    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 50px);
+
+    gap: 25px;
   }
 
   .landing-left {
-    padding-left: 20px;
+    padding-left: 45px;
   }
 
   .landing-right {
-    grid-column: span 2;
-  }
-
-  .landing-center {
-    position: absolute;
-    opacity: 0.25;
-    width: 100%;
-    pointer-events: none;
+    left: 120px;
   }
 }
+
+
+/* =========================================================
+   1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .landing-container {
+    width: calc(100% - 40px);
+
+    gap: 20px;
+  }
+
+  .landing-left {
+    padding-left: 35px;
+  }
+
+  .landing-right {
+    width: 85%;
+
+    left: 70px;
+  }
+
+  .landing-left h2:first-of-type {
+    font-size: clamp(46px, 5vw, 70px);
+  }
+
+  .landing-left h2 {
+    font-size: clamp(30px, 3.5vw, 52px);
+  }
+
+  .role {
+    font-size: 18px;
+  }
+
+  .description {
+    max-width: 420px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .landing-container {
+    width: calc(100% - 40px);
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 20px;
+  }
+
+  .landing-left {
+    padding-left: 25px;
+  }
+
+  .landing-right {
+    width: 100%;
+
+    left: 0;
+
+    top: 0;
+
+    height: min(650px, calc(100vh - 100px));
+  }
+
+  .social-sidebar {
+    left: 12px;
+  }
+
+  .landing-left h2:first-of-type {
+    font-size: 52px;
+  }
+
+  .landing-left h2 {
+    font-size: 38px;
+  }
+
+  .role {
+    font-size: 17px;
+
+    letter-spacing: 2px;
+  }
+
+  .description {
+    font-size: 15px;
+
+    max-width: 380px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .landing-container {
+    width: calc(100% - 40px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 90px 0 50px;
+
+    box-sizing: border-box;
+  }
+
+  .landing-left {
+    width: 100%;
+
+    max-width: 600px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+  }
+
+  .landing-right {
+    width: min(100%, 600px);
+
+    height: 520px;
+
+    margin: 0 auto;
+
+    left: 0;
+
+    top: 0;
+  }
+
+  .social-sidebar {
+    position: static;
+
+    transform: none;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 10px;
+  }
+
+  .landing-left h2:first-of-type {
+    font-size: clamp(48px, 7vw, 65px);
+  }
+
+  .landing-left h2 {
+    font-size: clamp(34px, 5vw, 48px);
+  }
+
+  .description {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   768px
+   ========================================================= */
 
 @media (max-width: 768px) {
-  .landing-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 20px 40px;
+
+  .landing-section {
+    min-height: 100svh;
+
+    overflow-x: hidden;
+
+    overflow-y: visible;
   }
 
-  .landing-left h1 {
-    font-size: 46px;
+  .landing-container {
+    width: 100%;
+
+    min-height: 100svh;
+
+    padding: 90px 20px 40px;
+
+    gap: 30px;
+
+    box-sizing: border-box;
+  }
+
+  .landing-left {
+    width: 100%;
+
+    max-width: 600px;
+
+    padding: 0;
+  }
+
+  .hello {
+    font-size: 20px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .landing-left h2:first-of-type {
+    font-size: clamp(42px, 9vw, 58px);
+  }
+
+  .landing-left h2 {
+    font-size: clamp(32px, 7vw, 45px);
+  }
+
+  .role {
+    font-size: 17px;
+
+    letter-spacing: 2px;
+  }
+
+  .description {
+    width: 100%;
+
+    max-width: 100%;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    margin-top: 22px;
+  }
+
+  .landing-right {
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 500px;
+
+    margin: 0 auto;
   }
 }
 
 
+/* =========================================================
+   MOBILE
+   480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .landing-container {
+    padding: 80px 15px 30px;
+
+    gap: 25px;
+  }
+
+  .landing-left {
+    width: 100%;
+  }
+
+  .hello {
+    font-size: 18px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .landing-left h2:first-of-type {
+    font-size: clamp(36px, 10vw, 46px);
+
+    letter-spacing: 2px;
+  }
+
+  .landing-left h2 {
+    font-size: clamp(28px, 8vw, 38px);
+
+    margin: 13px 0;
+  }
+
+  .line {
+    width: 50px;
+
+    margin: 20px 0;
+  }
+
+  .role {
+    font-size: 15px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .description {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .hero-buttons {
+    margin-top: 20px;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    height: 46px;
+
+    padding: 0 18px;
+
+    font-size: 13px;
+  }
+
+  .landing-right {
+    height: 460px;
+  }
+
+  .social-sidebar {
+    gap: 16px;
+  }
+
+  .social-sidebar a {
+    font-size: 20px;
+  }
+}
 
 
+/* =========================================================
+   VERY SMALL MOBILE
+   375px
+   ========================================================= */
+
+@media (max-width: 375px) {
+
+  .landing-container {
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+  .hello {
+    font-size: 17px;
+  }
+
+  .landing-left h2:first-of-type {
+    font-size: 34px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .landing-left h2 {
+    font-size: 29px;
+  }
+
+  .role {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    height: 44px;
+
+    padding: 0 16px;
+
+    font-size: 12px;
+  }
+
+  .landing-right {
+    height: 430px;
+  }
+}
