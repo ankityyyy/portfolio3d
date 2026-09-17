@@ -64,7 +64,7 @@ console.log("Sending to backend:", question);
     try {
       const response = await fetch(
         "http://localhost:2000/api/v1/query/063a2a39-01a8-43c2-bf85-cfce19ff35cc",
-        {
+        { 
           method: "POST",
           headers: {
             "Content-Type": "application/json",
