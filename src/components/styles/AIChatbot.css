@@ -828,3 +828,27 @@
   scroll-behavior: smooth;
 }
 
+
+.message-box p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.message-box p:last-child {
+  margin-bottom: 0;
+}
+
+.message-box ul,
+.message-box ol {
+  margin: 8px 0;
+  padding-left: 22px;
+}
+
+.message-box li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.message-box strong {
+  font-weight: 700;
+}

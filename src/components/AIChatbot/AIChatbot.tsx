@@ -5,6 +5,7 @@ import {
   useState,
   type KeyboardEvent,
 } from "react";
+import ReactMarkdown from "react-markdown";
 
 import "../styles/AIChatbot.css";
 
@@ -231,7 +232,9 @@ function AIChatbot() {
                     : ""
                 }`}
               >
-                {message.text}
+                <ReactMarkdown>
+  {message.text}
+</ReactMarkdown>
               </div>
 
               <span className="message-time">
